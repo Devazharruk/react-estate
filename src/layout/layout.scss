@@ -1,0 +1,24 @@
+@import '../responsive.scss';
+
+.layout{
+    height: 100vh;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+
+    @include largeScreens{
+        max-width: 1280px;
+    }
+    @include mediumScreens{
+        max-width: 768px;
+    }
+    @include smallScreens{
+        max-width: 640px;
+    }
+
+    .content{
+        height: calc(100vh - 100px);;
+    }
+}

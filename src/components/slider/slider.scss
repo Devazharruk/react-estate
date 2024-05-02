@@ -1,0 +1,100 @@
+@import '../../responsive.scss';
+
+.slider{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    .sliderBox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        z-index: 99999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        padding: 0px 50px;
+
+        .close{
+            position: absolute;
+            top: 80px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+
+            @include mediumScreens{
+                top: 50px;
+            }
+        }
+
+        .arrow{
+            width: 40px;
+            cursor: pointer;
+
+            img{
+                width: 100%;
+                background-color: transparent;
+
+                &.right{
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        .imgContainer{
+            width: 90%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+
+                @include smallScreens{
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    .bigImage{
+        flex: 4;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+
+            
+        }
+    }
+
+    .smallImages{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+
+        img{
+            width: 200px;
+            height: 140px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            @include mediumScreens{
+                width: 160px;
+                height: 110px;
+            }
+        }
+    }
+}

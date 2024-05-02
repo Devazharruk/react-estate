@@ -1,0 +1,39 @@
+@import '../../responsive.scss';
+
+.listPage{
+    display: flex;
+    height: 100%;
+
+    .listContainer{
+        flex: 3;
+        padding-bottom: 50px;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .wrapper{
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            @include mediumScreens{
+                padding-right: 30px;
+            }
+            @include smallScreens{
+                padding-right: 0px;
+            }
+        }
+
+    }
+
+    .mapContainer{
+        flex: 2;
+        height: 100%;
+        background-color: #fcf5f3;
+
+        @include mediumScreens{
+            display: none;
+        }
+    }
+}

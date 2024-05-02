@@ -1,0 +1,25 @@
+.popupConatiner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img{
+        width: 100px;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    .popupDetail{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .bedroom{
+            font-size: 12px;
+        }
+
+        .price{
+            font-size: 16px;
+        }
+    }
+}

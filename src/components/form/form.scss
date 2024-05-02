@@ -1,0 +1,139 @@
+@import '../../responsive.scss';
+
+.formContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: all 1s ease;
+
+    &.active{
+        left: -100%;
+    }
+    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // background-color: rgb(245, 242, 242);
+        background-color: white;
+        width: 50%;
+        height: 50%;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        gap: 20px;
+
+        @include mediumScreens{
+            box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.1);
+            height: 70%;
+            padding: 10px 20px;
+        }
+
+        @include smallScreens{
+            width: 90%;
+            height: 40%;
+        }
+
+        .title{
+            font-size: 48px;
+
+            @include mediumScreens{
+                font-size: 35px;
+            }
+        }
+
+        
+
+        .inputBox{
+            
+            
+            label{
+                font-size: 18px
+            }
+            .input{
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 0px 10px;
+                height: 70px;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                @include mediumScreens{
+                    height: 60px;
+                }
+
+                img{
+                    width: 30px;
+                    height: 30px;
+
+                    @include mediumScreens{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                input{
+                    flex: 1;
+                    outline: none;
+                    border: none;
+                    font-size: 20px;
+                }
+                i{
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: #353434;
+
+                    @include mediumScreens{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+           .forgetPassword{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 18px;
+            margin-top: 10px;
+            color: #2c2c2c;
+            font-weight: bold;
+
+            @include mediumScreens{
+                font-size: 16px;
+            }
+           }
+        }
+
+        button{
+            width: max-content;
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #FECE51;
+            font-size: 28px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.5s ease;
+
+            
+            @include mediumScreens{
+                font-size: 20px;
+            }
+
+            &:hover{
+                scale: 1.05;
+            }
+        }
+    }
+}

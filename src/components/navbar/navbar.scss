@@ -1,0 +1,203 @@
+@import "../../responsive.scss";
+
+nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  a {
+    font-size: 20px;
+    transition: all 0.5s ease;
+
+    @include smallScreens {
+      display: none;
+    }
+    @include mediumScreens {
+      font-size: 17px;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex: 3;
+
+    @include mediumScreens {
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 50px;
+        height: 50px;
+
+        @include mediumScreens {
+          width: 35px;
+          height: 35px;
+        }
+
+        @include smallScreens {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      span {
+        font-weight: bold;
+
+        @include mediumScreens {
+          display: none;
+        }
+        @include smallScreens {
+          display: initial;
+        }
+      }
+    }
+  }
+  .right {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    flex: 2;
+    background-color: #fcf5f3;
+
+    @include smallScreens {
+      gap: 5px;
+    }
+
+    @include mediumScreens {
+      background-color: transparent;
+    }
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      padding-right: 20px;
+
+      @include mediumScreens {
+        gap: 30px;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+
+          
+          @include smallScreens {
+            display: flex;
+          }
+        }
+        span {
+          font-size: 20px;
+          font-weight: 600;
+
+          @include mediumScreens {
+            font-size: 16px;
+          }
+
+          @include smallScreens {
+            display: none;
+          }
+        }
+      }
+      .profile {
+        padding: 12px 24px;
+        background-color: #fece51;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        z-index: 1;
+        
+
+        @include smallScreens{
+          display: none;
+        }
+
+        .notifications {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          padding: 5px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 26px;
+          height: 26px;
+        
+        }
+
+        
+      }
+    }
+
+    .signUp {
+      background-color: #fece51;
+      padding: 12px 24px;
+    }
+
+    .menuIcons {
+      display: none;
+      z-index: 9999;
+
+      @include smallScreens {
+        display: initial;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .menu {
+      width: 50%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      // justify-content: center;
+      padding-top: 150px;
+      align-items: center;
+      gap: 30px;
+      font-size: 25px;
+      background-color: black;
+      position: absolute;
+      right: -50%;
+      top: 0;
+      transition: all 1s ease;
+      z-index: 999;
+
+      @include smallScreens {
+        display: flex;
+      }
+
+      &.active {
+        right: 0;
+      }
+
+      a {
+        display: flex;
+        color: white;
+        font-size: 25px;
+      }
+    }
+  }
+}
